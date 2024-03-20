@@ -4,14 +4,11 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/motorola/jeter
+# Aljeter
+DEVICE_PATH := device/motorola/aljeter
 
-# Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := MSM8937
-TARGET_NO_BOOTLOADER := true
-
-# Platform
-TARGET_BOARD_PLATFORM := msm8937
+# Assert
+TARGET_OTA_ASSERT_DEVICE := aljeter
 
 # Architecture
 TARGET_ARCH := arm64
@@ -20,7 +17,6 @@ TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := cortex-a53
-
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
@@ -51,6 +47,12 @@ AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
 BOARD_SUPPORTS_SOUND_TRIGGER := false
 BOARD_USES_ALSA_AUDIO := true
 
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := MSM8937
+TARGET_BOARD_PLATFORM := msm8937
+TARGET_NO_BOOTLOADER := true
+
+
 # Boot animation
 TARGET_BOOTANIMATION_HALF_RES := true
 
@@ -62,15 +64,12 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 BOARD_NO_CHARGER_LED := true
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := jeter,aljeter
+# Display
+TARGET_SCREEN_DENSITY := 300
 
 # GPS
 TARGET_NO_RPC := true
 TARGET_USES_HARDWARE_QCOM_GPS := false
-
-# Display
-TARGET_SCREEN_DENSITY := 320
 
 # GPU
 TARGET_DISABLE_POSTRENDER_CLEANUP := true
@@ -100,9 +99,9 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 
-TARGET_KERNEL_SOURCE := kernel/motorola/msm8953
-TARGET_KERNEL_RECOVERY_CONFIG := jeter_recovery_defconfig
-TARGET_KERNEL_CONFIG := jeter_defconfig
+TARGET_KERNEL_SOURCE := kernel/motorola/msm8937
+TARGET_KERNEL_RECOVERY_CONFIG := aljeter_recovery_defconfig
+TARGET_KERNEL_CONFIG := aljeter_defconfig
 TARGET_KERNEL_VERSION := 4.9
 
 # llvm
@@ -185,4 +184,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
-include vendor/motorola/jeter/BoardConfigVendor.mk
+include vendor/motorola/aljeter/BoardConfigVendor.mk

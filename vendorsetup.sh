@@ -1,14 +1,3 @@
-# Clone/Fetch Upstream Device Dependencies
-
-echo "cloning vendor blobs"
-git clone -b thirteen git@github.com:Team-NoobMaster69/vendor_motorola_jeter.git vendor/motorola/jeter
-echo ""
-
-# Kernel
-echo "cloning kernel"
-git clone -b aljeter-337 git@github.com:Team-NoobMaster69/kernel_motorola_msm8953.git kernel/motorola/msm8953
-echo ""
-
 # Dependencies
 echo "cloning dependencies"
 git clone -b lineage-18.1 https://github.com/LineageOS/android_external_sony_boringssl-compat external/sony/boringssl-compat
@@ -16,7 +5,7 @@ git clone -b lineage-20 https://github.com/LineageOS/android_system_qcom system/
 git clone -b lineage-20 https://github.com/LineageOS/android_hardware_motorola hardware/motorola
 echo ""
 
-# DtbTools lineage
+# DtbTools
 echo "cloning dtbTools lineage"
 mkdir out/
 mkdir out/host/
