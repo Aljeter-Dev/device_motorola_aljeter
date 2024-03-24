@@ -114,7 +114,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.hwc_set_default_colormode=true \
     ro.vendor.display.cabl=0 \
-    vendor.display.disable_rotator_downscale=1 \
     vendor.display.enable_default_color_mode=1 \
     vendor.gralloc.disable_ahardware_buffer=1
 
@@ -142,8 +141,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.gralloc.gfx_ubwc_disable=0 \
     debug.sf.enable_hwc_vds=0 \
     debug.sf.hw=0 \
-    debug.cpurend.vsync=false \
-    debug.sf.disable_client_composition_cache=1 \
     debug.sf.latch_unsignaled=1 \
     debug.sf.recomputecrop=0 \
     dev.pm.dyn_samplingrate=1 \
