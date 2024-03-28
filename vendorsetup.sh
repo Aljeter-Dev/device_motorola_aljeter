@@ -7,10 +7,7 @@ echo ""
 
 # DtbTools
 echo "cloning dtbTools lineage"
-mkdir out/
-mkdir out/host/
-mkdir out/host/linux-x86/
-mkdir out/host/linux-x86/bin
+mkdir -p out/host/linux-x86/bin
 cd out/host/linux-x86/bin
 wget -c https://github.com/krasCGQ/scripts/raw/master/prebuilts/bin/dtbToolLineage
 chmod +777 dtbToolLineage
